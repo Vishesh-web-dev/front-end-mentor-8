@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(185, 41%, 84%);
+    /* height: 100vh; */
+    font-family: 'Space Mono', monospace;
+   
+  }
+  header{
+    min-width: 700px;
+    margin: 0 auto;
+  }
+  .top{
+    text-align: center;
+    margin-top: 3em;
+    letter-spacing: 15px;
+    font-size:24px;
+    color: hsl(186, 14%, 43%);
+    
+  }
+  .bottom{
+    text-align: center;
+    letter-spacing: 15px;
+    font-size: 24px;
+    color: hsl(186, 14%, 43%);
+    
+  }
+  main{
+    margin: 5em auto;
+    min-width: 700px;
+    max-width: 50%;
+    background-color:  hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    
+  }
+  
+  .flex-1{
+    padding: 0 1.5rem;
+    width: 50%;
+    margin-right:10px ;
+  }
+  .heading{
+    font-size: 12px;
+    font-family: 'Space Mono';
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+    margin-bottom: 5px;
+  }
+  .bill{
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .bill-text{
+    padding: 4px;
+    text-align: right;
+    width: 100%;
+    color: hsl(183, 100%, 15%);
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid hsl(172, 67%, 45%);
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Space Mono';
+  }
+  #doller{
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: hsl(184, 14%, 56%);
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    margin-bottom: 30px;
+  }
+  .grid-items{
+    text-align: center;
+    width:100%;
+    background-color: hsl(183, 100%, 15%);
+    padding:5px 20px;
+    border-radius: 5px;
+    color: hsl(185, 41%, 84%);
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .grid-custom{
+    text-align: center;
+    width:100%;
+    border: 2px solid hsl(172, 67%, 45%);
+    background-color: hsl(189, 41%, 97%);
+    padding:4px;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Space Mono';
+  }
+  .grid-items:hover{
+    color:hsl(183, 100%, 15%) ;
+    background-color: hsl(185, 41%, 84%);
+  }
+  .numberofpeople{
+    position:relative;
+  }
+  #user{
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: hsl(184, 14%, 56%);
+  }
+  .numberofpeople-text{
+    padding: 4px;
+    text-align: right;
+    width: 100%;
+    color: hsl(183, 100%, 15%);
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid hsl(172, 67%, 45%);
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Space Mono';
+  }
+  #error{
+    position:absolute;
+    color: orange;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Space Mono';
+    right: 0;
+    top: -22px;
+    display: none;
+  }
+  .flex-2{
+    width: 50%;
+    background-color: hsl(183, 100%, 15%);
+    padding: 3rem 2rem 2rem 2rem;
+    margin-left:10px ;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .output-1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  th{
+    font-size: 12px;
+    color:hsl(185, 41%, 84%);
+    font-weight: 700;
+    text-align: left;
+  }
+  td{
+    font-size: 10px;
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+  }
+  .ans{
+    font-size: 40px;
+    position: relative;
+    color: hsl(172, 67%, 45%);
+  }
+  .doller{
+    font-size: 28px;
+    position: absolute;
+    top: 16px;
+    left: -18px;
+  }
+  .output-2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .reset{
+    text-align: center;
+    width:100%;
+    font-family: 'Space Mono';
+    padding:8px 20px;
+    border-radius:4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    color:hsl(183, 100%, 15%) ;
+    background-color: hsl(172, 67%, 45%);
+    border: none;
+    margin-top: 50px;
+  }
+  .reset:hover{
+    background-color: hsl(185, 41%, 84%);
+  }
+  @media (max-width:700px){
+    main{
+      flex-direction: column;
+      min-width: 350px;
+    }
+    header{
+      min-width: 350px;
+      margin: 0 auto;
+    }
+    .flex-1{
+      padding: 0 1.5rem;
+      width: 100%;
+      margin-right:0px ;
+      margin-bottom: 15px;
+    }
+    .flex-2{
+      margin-left: 0;
+      margin-top: 15px;
+      width: 100%;
+    }
+  }

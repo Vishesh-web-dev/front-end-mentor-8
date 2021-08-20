@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/45d334c30c.js" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="top">SPIL</h1>
+    <h1 class="bottom">TTER</h1>
+  </header>
+  
+  <main>
+    
+    <div class="flex-1">
+      <p class="heading">Bill</p>
+      <div class="bill">
+        <i class="fas fa-dollar-sign" id="doller"></i>
+        <input type="text" class="bill-text" id="bill">
+      </div>
+      <p class="heading">Select Tip %</p>
+      <div class="grid">
+        <span class="grid-items"  onclick="tip1()">5%</span>
+        <span class="grid-items"  onclick="tip2()">10%</span>
+        <span class="grid-items"  onclick="tip3()">15%</span>
+        <span class="grid-items"  onclick="tip4()">25%</span>
+        <span class="grid-items"  onclick="tip5()">50%</span>
+        <input type="text" id="grid-custom" class="grid-custom" placeholder="Custom" onclick="func1()" onchange="tip6()" onblur="func2()">
+      </div>
+      <p class="heading">Number of People</p>
+
+      <div class="numberofpeople">
+        <span id="error">Can't be zero</span>
+        <i class="fas fa-user" id="user"></i>
+        <input type="text" class="numberofpeople-text" id="people">
+      </div> 
+    </div>
+    <div class="flex-2">
+      <div>
+      <div class="output-1">
+      <table>
+        <tr>
+          <th>Tip Amount</th>
+        </tr>
+        <tr>
+          <td>/ person</td>
+        </tr>
+      </table>
+      <span class="ans" id="ans1"><i class="fas fa-dollar-sign doller" ></i>0.00</span>
+    </div>
+      
+    <div class="output-2">
+      <table>
+        <tr>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td>Tip</td>
+        </tr>
+      </table>
+      <span class="ans" id="ans2"><i class="fas fa-dollar-sign doller" ></i>0.00</span>
+    </div>
+  </div>
+
+  <button type="reset" class="reset" onclick="reset()">reset</button>
+      
+    </div>
+ 
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
